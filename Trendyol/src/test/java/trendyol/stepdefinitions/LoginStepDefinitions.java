@@ -10,9 +10,10 @@ import java.sql.Driver;
 
 public class LoginStepDefinitions {
     @Given("user opens the login page")
-    public void use_opens_the_login_page() {
-      String url = ConfigurationReader.get("url");
-        MyDriver.getdriver().get(url);
+    public void use_opens_the_login_page() throws InterruptedException {
+      String url1 = ConfigurationReader.get("url");
+        MyDriver.getdriver().get(url1);
+        Thread.sleep(5000);
     }
 
     @When("he enters the credentials")
